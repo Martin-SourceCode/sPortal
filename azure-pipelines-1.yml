@@ -17,14 +17,14 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
-   - task: WhiteSource@21
-     inputs:
-       cwd: '$(System.DefaultWorkingDirectory)'
-       projectName: 'sPortal Mend Test'
-       configuration: |
-         checkPolicies=true
-          npm.resolveDependencies=true
-          maven.resolveDependencies=true
-         resolveAllDependencies=true
-         forceCheckAllDependencies=true
-         updateInventory=true
+- task: WhiteSource@21
+  inputs:
+    cwd: '$(System.DefaultWorkingDirectory)'
+    projectName: 'sPortal Mend'
+    configuration: |
+      checkPolicies=true
+      npm.resolveDependencies=true
+      maven.resolveDependencies=true
+      resolveAllDependencies=true
+      forceCheckAllDependencies=true
+      updateInventory=true
